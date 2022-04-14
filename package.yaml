@@ -1,0 +1,80 @@
+name:                myproj
+version:             0.1.0.0
+github:              "zloilya/poll-forward-bot"
+license:             BSD3
+author:              "Ilya Baryshnikov"
+maintainer:          "Zlonast3@gmail.com"
+copyright:           "2021 Ilya Baryshnikov"
+
+extra-source-files:
+- README.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/myproj#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- aeson
+- servant
+- servant-server
+- wai
+- warp
+- directory
+- text
+- http-conduit
+- http-types
+- bytestring
+- http-client
+- uri-encode
+
+default-extensions:
+- DataKinds
+- DeriveGeneric
+- FlexibleInstances
+- OverloadedStrings
+- ScopedTypeVariables
+- DeriveAnyClass
+- FlexibleContexts
+- TypeOperators
+- RecordWildCards
+
+library:
+  source-dirs: src
+
+executables:
+  myproj-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -Wall
+    - -Werror
+    dependencies:
+    - base
+    - myproj
+
+tests:
+  myproj-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -Wall
+    - -Werror
+    dependencies:
+    - base
+    - myproj
+    - hspec
+    - hspec-wai
+    - hspec-wai-json
+    - aeson
