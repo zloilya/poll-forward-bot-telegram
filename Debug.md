@@ -12,14 +12,14 @@
    1. это bot + token 
    2. setWebook = сайт ngrok-а
    3. уникальная сылка, делаем нашим токином token
-   ~~https://api.telegram.org/bot5004811765:AAFnaaDIV6PVoTpW1pvFmY0S0Lhv_RMY2KM/setWebhook?uri=https://ceea-85-143-144-36.ngrok.io/5004811765:AAFnaaDIV6PVoTpW1pvFmY0S0Lhv_RMY2KM~~
-   curl --location --request POST "https://api.telegram.org/bot5004811765:AAFnaaDIV6PVoTpW1pvFmY0S0Lhv_RMY2KM/setWebhook" --header "Content-Type: application/json" --data-raw '{"url": "https://8434-195-93-148-161.ngrok.io/5004811765:AAFnaaDIV6PVoTpW1pvFmY0S0Lhv_RMY2KM"}'
+   ~~https://api.telegram.org/bot123456:opatslitblagogithubskazal/setWebhook?uri=https://ceea-85-143-144-36.ngrok.io/123456:opatslitblagogithubskazal~~
+   curl --location --request POST "https://api.telegram.org/bot123456:opatslitblagogithubskazal/setWebhook" --header "Content-Type: application/json" --data-raw '{"url": "https://8434-195-93-148-161.ngrok.io/123456:opatslitblagogithubskazal"}'
 
 4) теперь надо запустить сервер
    stack build
    stack run
 5) в конце удаляем вебхук
-   https://api.telegram.org/bot5004811765:AAFnaaDIV6PVoTpW1pvFmY0S0Lhv_RMY2KM/deleteWebhook
+   https://api.telegram.org/bot123456:opatslitblagogithubskazal/deleteWebhook
 
 **Deployed**
 1) убедаемся что флаг #define Debug в Server и Security отключен
